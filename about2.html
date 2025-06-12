@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-us</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+#navigation {
+  width: 100%;
+  padding: 15px 0;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1030;
+}
+
+.navbar-brand span {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.navbar .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0px 5%;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #000;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff !important;
+}
+
+.nav-link.active {
+  color: #007bff !important;
+  font-weight: bold;
+  border-bottom: 2px solid #007bff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.phone-btn {
+  background-color: #0a63e8;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 0 0 4px rgba(10, 99, 232, 0.15);
+  white-space: nowrap;
+}
+
+.phone-btn i {
+  font-size: 16px;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+@media (max-width: 991px) {
+  .action-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+
+.navbar .dropdown-menu {
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #fff;
+  min-width: 180px;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #333;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  color: #007bff !important;
+  border-radius: 4px;
+  background-color: transparent !important;
+}
+
+.navbar-nav .dropdown-menu {
+  margin-top: 10px;
+}
+      .footer {
+        margin-top: 20px;
+        border-top: #cbcbcb 2px solid;
+      background-color: #F8F9FA;
+      padding: 60px 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #1f2d3d;
+    }
+
+    .footer .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .footer p {
+      color: #5a5a5a;
+      font-size: 15px;
+      margin: 15px 0;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer ul li a {
+      text-decoration: none;
+      color: #1f2d3d;
+      font-size: 15px;
+    }
+
+    .footer ul li a:hover {
+      color: #007bff;
+    }
+
+    .footer .social-icons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; 
+  padding: 10px 0;
+}
+
+.footer .social-icons a {
+  color: #1f2d3d;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #1f2d3d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  transform: translateY(-3px); /* subtle hover lift */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+  #backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+}
+#backToTop:hover {
+  background-color: #0056b3;
+}
+.breadcrumb-area {
+      position: relative;
+      background: url('https://dentalx-nextjs-demo.vercel.app/assets/img/breadcrumb/vl-about-breadcrumb.png') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      height: 500px;
+    }
+    .breadcrumb-area::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 60, 100, 0.6); /* blue shade */
+      z-index: 0;
+    }
+    .breadcrumb-area .container {
+      position: relative;
+      z-index: 1;
+    }
+    .breadcrumb-title {
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .breadcrumb-item {
+      font-size: 20px;
+    }
+    .breadcrumb-list {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0;
+      display: inline-flex;
+      gap: 10px;
+    }
+   .breadcrumb-item a {
+      text-decoration: none;
+      color: #fff;
+    }
+      .section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 80px 10%;
+      gap: 40px;
+      margin-top: 2%;
+    }
+
+    .section-left {
+      flex: 1 1 45%;
+    }
+
+    .section-left h4 {
+      color: #3a64d8;
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .section-left h2 {
+      font-size: 50px;
+      font-weight: 600;
+      /* font-weight: bold; */
+      margin-bottom: 20px;
+    }
+
+    .section-left p {
+      font-size: 20px;
+      font-weight: 600;
+      color: #999;
+      margin-bottom: 30px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 5%;
+    }
+
+    .feature-item {
+      flex: 1 1 45%;
+    }
+
+    .feature-item h4 {
+      font-size: 25px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .feature-item p {
+      font-size: 20px;
+      font-weight: 600;
+      color: #999;
+    }
+
+    .section-right {
+      flex: 1 1 45%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .section-right img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      height: 250px;
+    }
+
+    .section-right:hover img{
+        transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        padding: 40px 20px;
+      }
+
+      .section-right {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-left h2 {
+        font-size: 28px;
+      }
+    }
+
+    .team-section {
+      text-align: center;
+      margin-bottom: 40px;
+      margin-top: 5%;
+    }
+
+    .team-section h3 {
+      color: #3366cc;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .team-section h1 {
+      font-size: 50px;
+      color: #0a1f44;
+      margin: 0 0 10px;
+    }
+
+    .team-section p {
+      color: #7a8ca5;
+      font-size: 16px;
+    }
+
+    .swiper {
+      padding: 20px 0;
+    }
+
+    .profile-card {
+      background-color: #f8f9fb;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .profile-image {
+      flex: 1 1 40%;
+      background: #e0e7f0;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-details {
+      flex: 1 1 60%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .profile-details h4 {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .profile-details small {
+      color: #5d6be0;
+      font-weight: 500;
+    }
+
+    .profile-details h6 {
+      margin-top: 20px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .profile-details ul {
+      padding: 0;
+      margin: 15px 0;
+      list-style: none;
+    }
+
+    .profile-details ul li {
+      color: #6c757d;
+      margin-bottom: 8px;
+    }
+
+    .profile-details ul li i {
+      color: #4d6fe6;
+      margin-right: 10px;
+    }
+
+    .social-icons a {
+      color: #4d6fe6;
+      font-size: 18px;
+      margin-right: 15px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #1a1a1a;
+    }
+
+    .profile-number {
+      font-size: 60px;
+      font-weight: 700;
+      color: #e1e6f4;
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      .profile-content {
+        flex-direction: column;
+      }
+
+      .profile-number {
+        text-align: left;
+        margin-top: 15px;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #4d6fe6;
+    }
+      @media (max-width: 768px) {
+      .profile-content {
+        flex-direction: column;
+        margin-top: 5px;
+         background-color: #f8f9fb;
+      }
+      .profile-image {
+        height: auto;
+      }
+      .profile-image img {
+        height: auto;
+      }
+      .profile-number {
+        text-align: left;
+        margin-top: 15px;
+      }
+      .profile-details{
+        margin-top: 250px;
+      }
+    }
+    @media (max-width:543){
+         .profile-details{
+        margin-top: 0px;
+      }
+    }
+       .about-section {
+      padding: 60px 0;
+      background-color: #fff;
+    }
+
+    .about-section h3{
+      color: #007bff;
+      font-weight: 600;
+    }
+
+    .about-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0d1b4c;
+    }
+
+    .about-section p {
+      color: #98a2b3;
+      font-size: 1rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: #0d1b4c;
+      font-weight: 600;
+    }
+
+    .feature-list li::before {
+      content: "✔";
+      color: #3b82f6;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .about-images img {
+      width: 100%;
+      height: 500px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .about-images .img2{
+      margin-top: 100px;
+    }
+
+         .book-outline-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  color: #4e6cfb;
+  border: 2px solid #4e6cfb;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.book-outline-btn:hover {
+  background-color: #4e6cfb;
+  border-color: #4e6cfb;
+  color: #fff;
+}
+    </style>
+</head>
+<body>
+    <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><span>Dentist</span></a>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" id="navbarHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Home
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarHomeDropdown">
+            <li><a class="dropdown-item" href="./index.html">Home-1</a></li>
+            <li><a class="dropdown-item" href="./home2.html">Home-2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarHomeDropdown">
+            <li><a class="dropdown-item" href="./about.html">About-1</a></li>
+            <li><a class="dropdown-item" href="./about2.html">About-2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarHomeDropdown">
+            <li><a class="dropdown-item" href="./Services1.html">Services-1</a></li>
+            <li><a class="dropdown-item" href="./Services2.html">Services-2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" id="navbarHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Team
+          </a>
+          <ul class="dropdown-menu " aria-labelledby="navbarHomeDropdown">
+            <li><a class="dropdown-item" href="./Team1.html">Team-1</a></li>
+            <li><a class="dropdown-item" href="./Team2.html">Team-2</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" id="navbarHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Pricing
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarHomeDropdown">
+            <li><a class="dropdown-item" href="./Pricing1.html">Pricing-1</a></li>
+            <li><a class="dropdown-item" href="./Pricing2.html">Pricing-2</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Contact
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarHomeDropdown">
+            <li><a class="dropdown-item" href="./contact.html">Contact-1</a></li>
+            <li><a class="dropdown-item" href="./contact2.html">Contact-2</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="action-buttons d-none d-lg-flex ms-3">
+        <a href="tel:+919875129913" class="phone-btn">
+          <i class="fas fa-phone"></i> (+01) 789 987 645
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+ <button onclick="scrollToTop()" id="backToTop">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+   <div class="breadcrumb-area">
+    <div class="container">
+      <h2 class="breadcrumb-title">About us</h2>
+      <ul class="breadcrumb-list">
+        <li class="breadcrumb-item"><b>Home</b></li>
+        <li class="breadcrumb-item"><b>About us</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="about-section">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-6 d-flex gap-4 about-images">
+        <div class="w-60">
+          <img src="./service2.jpg" alt="Dental 1"  class="img1"/>
+        </div>
+        <div class="w-60">
+          <img src="./service3.jpg" alt="Dental 2" class="img2"/>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <h3>About Us</h3>
+        <h2>Professionals and <br/> Personalized Dental Excellence</h2>
+        <p>We offer high-quality dental care tailored for the whole family. From routine checkups to advanced treatments, our compassionate team ensures your smile stays healthy and confident.</p>
+        
+        <div class="row mt-4">
+          <div class="col-sm-6">
+            <ul class="feature-list">
+              <li>Personalized Treatment Plans</li>
+              <li>Gentle Care for Kids and Adults</li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <ul class="feature-list">
+              <li>State-of-the-Art Technology</li>
+              <li>Flexible Appointment Scheduling</li>
+            </ul>
+          </div>
+        </div>
+        <button class="btn book-outline-btn mt-4">Book Appointment</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section">
+    <div class="section-left">
+      <h4>Why Choose Our Dental Care</h4>
+      <h2>Exceptional Service With a <br>Personal Touch</h2>
+      <p>Choosing the right dental provider matters. We combine expert care, advanced technology, and a warm atmosphere to ensure every visit is comfortable, efficient, and tailored to your unique needs.</p>
+      <hr>
+      <div class="features">
+        <div class="feature-item">
+          <h4>Experienced Dental</h4>
+          <p>Skilled care backed by years of trusted dental experience.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Advanced Technology</h4>
+          <p>Modern tools ensure accurate and efficient treatments.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Personalized Treatment</h4>
+          <p>Custom care plans made to fit your lifestyle.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Family-Friendly</h4>
+          <p>Welcoming space for kids, teens, adults, and seniors.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-right">
+      <img src="./patients.jpg" alt="Dental Image 1"  class="img"/>
+      <img src="./service2.jpg" alt="Dental Image 2" />
+      <img src="./service3.jpg" alt="Dental Image 3" />
+      <img src="./service4.jpg" alt="Dental Image 4" />
+    </div>
+  </section>
+
+    <div class="team-section">
+    <h3>Meet Our Dental Team</h3>
+    <h1>Committed to Your Smile</h1>
+    <p>Our experienced dental team is here to make every visit positive and personalized.<br>With gentle hands and caring hearts.</p>
+  </div>
+  <div class="container">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="profile-card">
+            <div class="profile-content">
+              <div class="profile-image">
+                <img src="https://demo.awaikenthemes.com/primecare/wp-content/uploads/2024/09/doctor-1.jpg" alt="Dr. Kaushal Kakkad">
+              </div>
+              <div class="profile-details">
+                <div>
+                  <h4>Dr. Kaushal Kakkad</h4>
+                  <small>Lead Dentist</small>
+                  <h6 class="mt-4">Qualification</h6>
+                  <p>Doctor of Dental Surgery (DDS), NYU College of Dentistry</p>
+                  <h6 class="mt-4">Certifications</h6>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Invisalign Provider</li>
+                    <li><i class="fa-solid fa-check"></i> ACLS Certified</li>
+                  </ul>
+                  <h6>Awards</h6>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Top Dentist NY (2022)</li>
+                    <li><i class="fa-solid fa-check"></i> AACD Excellence (2021)</li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="social-icons mt-3">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+                  <div class="profile-number">1</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="swiper-slide">
+          <div class="profile-card">
+            <div class="profile-content">
+              <div class="profile-image">
+                <img src="https://demo.awaikenthemes.com/primecare/wp-content/uploads/2024/09/doctor-2.jpg" alt="Dr. Navnit K. Thummar">
+              </div>
+              <div class="profile-details">
+                <div>
+                  <h4>Dr. Navnit K. Thummar</h4>
+                  <small>Cosmetic Dentist</small>
+                  <h6 class="mt-4">Qualification</h6>
+                  <p>DMD, Univ. of Pennsylvania</p>
+                  <h6 class="mt-4">Certifications</h6>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Board Certified</li>
+                    <li><i class="fa-solid fa-check"></i> Sedation Certified</li>
+                  </ul>
+                  <h6>Awards</h6>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Best Periodontist 2023</li>
+                    <li><i class="fa-solid fa-check"></i> Clinical Research Award 2020</li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="social-icons mt-3">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+                  <div class="profile-number">2</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="profile-card">
+      <div class="profile-content">
+          <div class="profile-image">
+            <img src="https://demo.awaikenthemes.com/primecare/wp-content/uploads/2024/09/doctor-3.jpg" alt="Dr. Kaushal Kakkad">
+          </div>
+          <div class="profile-details">
+            <div>
+              <h4>Dr. Mayank U Patel</h4>
+              <small>Pediatric Specialist</small>
+    
+                <h6 class="mt-4">Qualification</h6>
+    <p>Bachelor of Dental Surgery (BDS), University of Mumbai; Master of Dental Surgery (MDS) in Orthodontics</p>
+
+    <h6 class="mt-4">Certifications</h6>
+    <ul>
+      <li><i class="fa-solid fa-check"></i> Invisalign Platinum Provider</li>
+      <li><i class="fa-solid fa-check"></i> Certified in Digital Smile Design</li>
+    </ul>
+
+    <h6>Awards</h6>
+    <ul>
+      <li><i class="fa-solid fa-check"></i> National Orthodontics Innovation Award (India, 2021)</li>
+      <li><i class="fa-solid fa-check"></i> Excellence in Dental Practice – Indian Dental Association (2022)</li>
+    </ul>
+            </div>
+            <div>
+              <div class="social-icons mt-3">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+              <div class="profile-number">3</div>
+            </div>
+          </div>
+        </div>
+  </div>
+        </div>
+
+        <div class="swiper-slide">
+             <div class="profile-card">
+      <div class="profile-content">
+          <div class="profile-image">
+            <img src="https://demo.awaikenthemes.com/primecare/wp-content/uploads/2024/09/doctor-4.jpg" alt="Dr. Kaushal Kakkad">
+          </div>
+          <div class="profile-details">
+            <div>
+              <h4>Dr. Laura Davis</h4>
+              <small>Dental Hygienist</small>
+    
+               <h6 class="mt-4">Qualification</h6>
+    <p>DDS, University of Michigan; MS in Prosthodontics</p>
+
+    <h6 class="mt-4">Certifications</h6>
+    <ul>
+      <li><i class="fa-solid fa-check"></i> Board Certified Prosthodontist</li>
+      <li><i class="fa-solid fa-check"></i> Laser Dentistry Certified (ALD)</li>
+    </ul>
+
+    <h6>Awards</h6>
+    <ul>
+      <li><i class="fa-solid fa-check"></i> American College of Prosthodontists Educator of the Year (2020)</li>
+      <li><i class="fa-solid fa-check"></i> International Smile Makeover Award (2023)</li>
+    </ul>
+
+            </div>
+            <div>
+              <div class="social-icons mt-3">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+              <div class="profile-number">4</div>
+            </div>
+          </div>
+        </div>
+  </div>
+        </div>
+
+        <div class="swiper-slide">
+             <div class="profile-card">
+      <div class="profile-content">
+          <div class="profile-image">
+            <img src="https://demo.awaikenthemes.com/primecare/wp-content/uploads/2024/09/doctor-5.jpg" alt="Dr. Kaushal Kakkad">
+          </div>
+          <div class="profile-details">
+            <div>
+              <h4>Dr. John Jones</h4>
+              <small>Dental Hygienist</small>
+    
+               <h6 class="mt-4">Qualification</h6>
+    <p>Bachelor of Dental Surgery (BDS), University of Mumbai; Master of Dental Surgery (MDS) in Orthodontics</p>
+
+  <h6 class="mt-4">Certifications</h6>
+    <ul>
+      <li><i class="fa-solid fa-check"></i> Board Certified Prosthodontist</li>
+      <li><i class="fa-solid fa-check"></i> Laser Dentistry Certified (ALD)</li>
+    </ul>
+
+    <h6>Awards</h6>
+    <ul>
+        <li><i class="fa-solid fa-check"></i> American College of Prosthodontists Educator of the Year (2020)</li>
+        <li><i class="fa-solid fa-check"></i> International Smile Makeover Award (2023)</li>
+    </ul>
+
+
+            </div>
+            <div>
+              <div class="social-icons mt-3">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+              <div class="profile-number">5</div>
+            </div>
+          </div>
+        </div>
+  </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-3">
+        <div class="logo-text mb-2">
+          <i class="fa-solid fa-tooth"></i> Dentist
+        </div>
+        <p>We're dedicated to providing high-quality, compassionate dental care for patients of all ages from preventive care.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul>
+          <li><a href="#">Home Page</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-bold">Our Services</h6>
+        <ul>
+          <li><a href="#">General Dental</a></li>
+          <li><a href="#">Cosmetic Dental</a></li>
+          <li><a href="#">Whitening Care</a></li>
+          <li><a href="#">Dental Implants</a></li>
+          <li><a href="#">Dental Care</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3">
+        <h6 class="fw-bold">Contact Us</h6>
+        <ul>
+          <li><i class="fa-solid fa-phone"></i> +91 98751 29913</li>
+          <li><i class="fa-solid fa-location-dot"></i> Doctor House, F-41/45, First Floor</li>
+          <li><i class="fa-solid fa-envelope"></i> contact@Dentist.com</li>
+          <li><i class="fa-solid fa-globe"></i> Dentist.com</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const backToTopButton = document.getElementById("backToTop");
+window.onscroll = function () {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+};
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+   var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+        },
+        992: {
+          slidesPerView: 1,
+        }
+      }
+    });
+</script>
+</body>
+</html>
